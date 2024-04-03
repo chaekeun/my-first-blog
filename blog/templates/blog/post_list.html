@@ -4,10 +4,14 @@
     </head>
     <body>
         <div><h1><a href="">Chaekeun's Django Blog</a></h1>
-        <h2>Hello, Django!</h2></div>
-        
-        
-        <p>( •̅ɞ•̅ )</p>
-        
+        <h2>Hello, Django! I'm Chaekeun ( •̅ɞ•̅ )</h2>
+        </div>
+{% for post in posts %}
+        <div>
+            <p>published: {{post.published_date}}</p>
+            <h3><a href="">{{post.title}}</a></h3>
+            <p>{{post.text|linebreaksbr}}</p>
+        </div>
+        {% endfor %}
     </body>
 </html>
